@@ -1,0 +1,1596 @@
+
+@import url('https://fonts.cdnfonts.com/css/rawline');
+
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rawline', sans-serif;
+    text-decoration: none;
+    list-style: none; 
+}
+
+body {
+    background-color: #ffffff;
+    display: block !important;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #0C2A66;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-topo {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #1b854a;
+    font-weight: bold;
+    border: 2px dashed #1b854a;
+    padding: 5px 10px;
+}
+
+.title h1 {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.menu-itens {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-itens > li > a {
+    color: #ffffff; 
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu-itens > li > a:hover {
+    color: #1b854a;
+}
+
+/* SUBMENU */
+.submenu {
+    position: relative;
+}
+
+.submenu-conteudo {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    border-top: 10px solid transparent;
+}
+
+.menu-itens .submenu-conteudo a {
+    color: #0C2A66 !important;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-itens .submenu-conteudo a:hover {
+    background-color: #f4f6f8;
+    color: #1b854a !important;
+}
+
+.submenu:hover .submenu-conteudo {
+    display: block;
+}
+
+/* BOTÃO LOGIN (HEADER) */
+.botao-login button {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 10px 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.botao-login button a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.botao-login button:hover {
+    background-color: #1b854a;
+    border-color: #1b854a;
+}
+
+/* BANNER */
+.banner {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+}
+.texto-banner {
+    flex: 1;
+}
+
+.texto-banner h1 {
+    order: 1;
+    font-size: 52px;
+    color: #0c2a66;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.texto-banner p {
+    order: 1;
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 35px;
+    max-width: 600px;
+}
+
+.imagem-banner {
+    order: 2;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-banner img {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* FORMULÁRIO DE BUSCA */
+.buscar-banner {
+    display: flex;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.buscar-banner input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #cbdce6;
+    border-right: none;
+    font-size: 16px;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.buscar-banner button {
+    background-color: #0c2a66;
+    color: #ffffff;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.buscar-banner button:hover {
+    background-color: #1b854a;
+}
+
+/* CATEGORIAS / MINI ICONS */
+.menu-icons {
+    background-color: #dddddd;
+    padding: 40px 5%;
+    text-align: center;
+    width: 100%;
+    clear: both; 
+    grid-column: 1 / -1;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.menu-icons h2 {
+    color: #0c2a66;
+    margin-bottom: 30px;
+}
+
+.mini-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px 0 auto;
+    padding: 0;
+}
+
+.mini-menu li a {
+    display: block;
+    background-color: #ffffff;
+    color: #0c2a66;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: all 0.2s;
+}
+
+.mini-menu li a:hover {
+    border-color: #1b854a;
+    color: #1b854a;
+    transform: translateY(-2px);
+}
+
+main > section {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+}
+/* CARDS DE FUNCIONAMENTO */
+.funcionamento {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto !important;
+    padding: 0 5%;
+    width: 100% !important;
+    box-sizing: border-box;
+  margin-bottom: 40px;
+    
+}
+
+.funcionamento .busque,
+.funcionamento .explore,
+.funcionamento .participe {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    display: block !important;
+}
+
+.funcionamento img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background-color: #d2e4f0;
+    border-radius: 20%;
+    padding: 12px; 
+    margin-bottom: 15px;
+}
+
+.funcionamento h3 {
+    color: #0c2a66;
+    margin-bottom: 10px;
+}
+
+.funcionamento p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* CADASTRO DE NOVIDADES */
+.cadastro-novidades {
+    background-color: #0c2a66;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 5%;       
+    width: 100%;
+    max-width: 100%;
+    margin: 40px 0; 
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.cadastro-novidades h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cadastro-novidades p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.cadastro-novidades .inicio {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cadastro-novidades input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+.cadastro-novidades button {
+    background-color: #1b854a;
+    color: #ffffff !important;
+    border: none;
+    padding: 0 25px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.cadastro-novidades button:hover {
+    background-color: #137537;
+}
+
+/* LEMBRETE */
+.lembrete {
+    max-width: 1200px;
+    margin: 60px auto 80px auto; 
+    padding: 40px 5%;
+    background-color: #d2e4f0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.texto-lembrete {
+    flex: 1;
+    text-align: left;
+}
+
+.lembrete h2 {
+    color: #0c2a66;
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.lembrete p {
+    color: #4a5568;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.imagem-lembrete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-lembrete img {
+    width: 100%;
+    max-width: 280px; 
+    height: auto;
+}
+
+/* RODAPÉ GERAL */
+.roodape-geral {
+    background-color: #f4f6f8;
+    border-top: 1px solid #cbdce6;
+    padding: 60px 5% 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Cada coluna */
+.logo-rodape,
+.navegacao,
+.categoria-rodape,
+.institucional-rodape {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Logo */
+.logo-rodape h2 {
+    color: #0c2a66;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.logo-rodape p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Títulos das colunas */
+.roodape-geral h3 {
+    color: #0c2a66;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+/* Reset de listas e links */
+.roodape-geral ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.roodape-geral ul li {
+    margin-bottom: 10px;
+}
+
+.roodape-geral ul li a {
+    color: #6c757d;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s;
+}
+
+.roodape-geral ul li a:hover {
+    color: #1b854a;
+}.roodape-geral {
+    background-color: #f4f6f8;
+    border-top: 1px solid #cbdce6;
+    padding: 60px 5% 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Cada coluna */
+.logo-rodape,
+.navegacao,
+.categoria-rodape,
+.institucional-rodape {
+    flex: 1;
+    min-width: 180px;
+}
+
+/* Logo */
+.logo-rodape h2 {
+    color: #0c2a66;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.logo-rodape p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* Títulos das colunas */
+.roodape-geral h3 {
+    color: #0c2a66;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+/* Reset de listas e links */
+.roodape-geral ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.roodape-geral ul li {
+    margin-bottom: 10px;
+}
+
+.roodape-geral ul li a {
+    color: #6c757d;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    transition: color 0.3s;
+}
+
+.roodape-geral ul li a:hover {
+    color: #1b854a;
+}
+
+/* Nova classe para o Copyright (Garante que ele fique centralizado embaixo) */
+.copyright-rodape {
+    width: 100%;
+    background-color: #f4f6f8; /* Mantém a mesma cor de fundo */
+    padding: 20px 0;
+    border-top: 1px solid #cbdce6;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Nova classe para o Copyright (Garante que ele fique centralizado embaixo) */
+.copyright-rodape {
+    width: 100%;
+    background-color: #f4f6f8; /* Mantém a mesma cor de fundo */
+    padding: 20px 0;
+    border-top: 1px solid #cbdce6;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* SEÇÃO DE FORMULÁRIO / PÁGINA DE CADASTRO */
+body > div:not(.roodape-geral) {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 5%;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body > div:not(.roodape-geral) > div:first-child {
+    flex: 1;
+    background-color: #d2e4f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > div:not(.roodape-geral) > div:first-child img {
+    max-width: 80%;
+    height: auto;
+}
+
+.form {
+    flex: 1.2;
+    padding: 40px;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f4f6f8;
+    padding-bottom: 15px;
+}
+
+.form-header .title h1 {
+    font-size: 28px;
+    color: #0c2a66;
+    font-weight: 800;
+}
+
+.login-button button {
+    background-color: transparent;
+    border: 1px solid #0c2a66;
+    padding: 7px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-button button a {
+    color: #0c2a66;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.login-button button:hover {
+    background-color: #0c2a66;
+}
+
+.login-button button:hover a {
+    color: #ffffff;
+}
+
+/* GRID DE INPUTS */
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0c2a66;
+    margin-bottom: 6px;
+}
+
+.input-box input {
+    padding: 12px;
+    border: 1px solid #cbdce6;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #4a4a4a;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-box input:focus {
+    border-color: #1b854a;
+}
+
+/* GÊNERO (RADIO BUTTONS) */
+.gender-inputs {
+    margin-bottom: 30px;
+}
+
+.gender-title h6 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0c2a66;
+    margin-bottom: 12px;
+}
+
+.gender-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.gender-input input[type="radio"] {
+    accent-color: #1b854a;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.gender-input label {
+    font-size: 14px;
+    color: #4a4a4a;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* BOTÃO ENVIAR (CONTINUAR) */
+.button button {
+    width: 100%;
+    background-color: #1b854a;
+    border: none;
+    padding: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button button a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+}
+
+.button button:hover {
+    background-color: #137537;
+}
+
+/* SEÇÃO PRINCIPAL (CONTEÚDO / POLÍTICA) */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.texto-politica, 
+.avisos, 
+.direcionamento {
+    grid-column: 1;
+}
+
+/* ==========================================================================
+   4. DETALHES DA POLÍTICA & BLOCOS DE AVISO
+   ========================================================================== */
+/* Bloco de Descrição */
+.texto-politica {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+}
+
+.texto-politica h2 {
+    font-size: 28px;
+    color: #0c2a66;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.texto-politica p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+/* Seção de Avisos (Público-Alvo, Inscrição, Prazos) */
+.avisos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.avisos > div {
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-top: 4px solid #0c2a66; 
+}
+
+
+.avisos .inscricao { border-top-color: #1b854a; } 
+.avisos .prazos { border-top-color: #0C2A66; }
+
+.avisos img {
+    width: 90px;
+    height: 90px;
+    background-color: #f4f6f8;
+    border-radius: 10%;
+    margin-bottom: 15px;
+}
+
+.avisos h1 {
+    font-size: 16px;
+    color: #0c2a66;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.avisos p {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* ==========================================================================
+   5. BARRA LATERAL (RESUMO RÁPIDO)
+   ========================================================================== */
+.resumo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    align-self: start; 
+}
+
+.resumo h2 {
+    font-size: 20px;
+    color: #0c2a66;
+    margin-bottom: 25px;
+    font-weight: 800;
+    border-bottom: 2px solid #f4f6f8;
+    padding-bottom: 10px;
+}
+
+.resumo img {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background-color: #d2e4f0;
+    border-radius: 15%;
+    display: inline-block;
+}
+
+.resumo h3 {
+    font-size: 14px;
+    color: #0c2a66;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.resumo p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-left: 30px;
+}
+
+.resumo hr {
+    border: 0;
+    border-top: 1px solid #f4f6f8;
+    margin-bottom: 15px;
+}
+
+.resumo hr:last-of-type {
+    display: none; 
+}
+
+/* ==========================================================================
+   6. DIRECIONAMENTO / CADASTRO (CALL TO ACTION)
+   ========================================================================== */
+.direcionamento, .cadastro {
+    background-color: #0c2a66;
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.direcionamento h2, .cadastro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.direcionamento p, .cadastro p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.direcionamento button, .cadastro button {
+    background-color: #1b854a;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.direcionamento button a, .cadastro button a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.direcionamento button:hover, .cadastro button:hover {
+    background-color: #137537;
+}
+
+/* ==========================================================================
+   7. TELA DE LOGIN
+   ========================================================================== */
+.login-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.login-principal {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Título Login do Form */
+form.login-principal h1 {
+    font-size: 32px;
+    color: #0c2a66;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estrutura dos campos com ícones internos */
+.usuario, .senha-usuario {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.usuario input, .senha-usuario input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    border: 1px solid #cbdce6;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #4a4a4a;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.usuario input:focus, .senha-usuario input:focus {
+    border-color: #0c2a66;
+    box-shadow: 0 0 0 3px rgba(12, 42, 102, 0.1);
+}
+
+/* Posicionamento dos SVGs dentro dos inputs */
+.usuario svg, .senha-usuario svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    pointer-events: none; 
+    transition: color 0.2s;
+}
+
+.usuario input:focus + svg, .senha-usuario input:focus + svg {
+    color: #0c2a66; /
+}
+
+/* Opções de Lembrar senha e Esqueci minha senha */
+.lembrar-senha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.lembrar-senha label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6c757d;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lembrar-senha input[type="checkbox"] {
+    accent-color: #0c2a66; 
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.lembrar-senha a {
+    color: #0c2a66;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lembrar-senha a:hover {
+    color: #1b854a;
+    text-decoration: underline;
+}
+
+/* Botão de Enviar Login (Azul Escuro da Marca) */
+button.login-principal {
+    width: 100%;
+    background-color: #0c2a66;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 25px;
+}
+
+button.login-principal:hover {
+    background-color: #1b854a; 
+}
+
+/* Texto de direcionamento para o Cadastro */
+.direcionamento-cadastro {
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+    border-top: 1px solid #f4f6f8;
+    padding-top: 20px;
+}
+
+.direcionamento-cadastro a {
+    color: #1b854a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.direcionamento-cadastro a:hover {
+    color: #137537;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   8. BANNER DA PÁGINA
+   ========================================================================== */
+.banner-politica {
+    padding: 60px 5% 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.banner-politica h1 {
+    font-size: 38px;
+    color: #0c2a66;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.banner-politica p {
+    font-size: 16px;
+    color: #6c757d;
+    max-width: 600px;
+}
+
+/* ==========================================================================
+   9. SISTEMA DE FILTRO E BUSCA
+   ========================================================================== */
+.pesquisar-politicas {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Caixa de Pesquisa */
+.pesquisar-politicas form {
+    display: flex;
+    flex: 2;
+    min-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pesquisar-politicas input[type="search"] {
+    flex: 1;
+    padding: 14px 20px;
+    border: 1px solid #cbdce6;
+    border-right: none;
+    font-size: 15px;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    background-color: #ffffff;
+}
+
+.pesquisar-politicas form button {
+    background-color: #0c2a66;
+    color: #ffffff;
+    border: none;
+    padding: 0 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.3s;
+}
+
+.pesquisar-politicas form button:hover {
+    background-color: #1b854a;
+}
+
+/* Caixa de Seleção de Categorias (Select) */
+.pesquisar-politicas label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0c2a66;
+    margin-left: auto; 
+}
+
+.pesquisar-politicas select {
+    padding: 13px 20px;
+    border: 1px solid #cbdce6;
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-size: 15px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pesquisar-politicas select:focus {
+    border-color: #1b854a;
+}
+
+/* ==========================================================================
+   10. GRID DOS CARDS DE CATEGORIAS
+   ========================================================================== */
+body > section:not(.roodape-geral) {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.card-categoria {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(12, 42, 102, 0.08);
+}
+
+/* Ícone do Card */
+.card-categoria img {
+    width: 44px;
+    height: 44px;
+    background-color: #d2e4f0;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Nome da Categoria (Ex: Categoria Saúde) */
+.card-categoria h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #1b854a;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+/* Título Principal da Política */
+.card-categoria h2 {
+    font-size: 20px;
+    color: #0c2a66;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Descrição Interna */
+.card-categoria p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 25px;
+    flex-grow: 1; 
+}
+
+/* Botão "Ver detalhes" */
+.card-categoria button {
+    background-color: transparent;
+    border: 1px solid #0c2a66;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.card-categoria button a {
+    color: #0c2a66;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.card-categoria button:hover {
+    background-color: #0c2a66;
+}
+
+.card-categoria button:hover a {
+    color: #ffffff;
+}
+
+
+
+/* ==========================================================================
+   3. SEÇÃO INTRODUTÓRIA (TITLE-SOBRE)
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 40px auto 80px auto;
+    padding: 0 5%;
+}
+
+
+main.main-institucional {
+    max-width: 900px;
+}
+
+.title-sobre {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    text-align: left;
+}
+
+.title-sobre img {
+    width: 50px;
+    height: 50px;
+    background-color: #d2e4f0;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.title-sobre h1 {
+    font-size: 32px;
+    color: #0c2a66;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.title-sobre hr {
+    border: 0;
+    height: 3px;
+    background-color: #1b854a;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.title-sobre p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.8;
+}
+
+/* Divisória principal entre a introdução e os cards */
+main > hr {
+    border: 0;
+    border-top: 1px solid #cbdce6;
+    margin: 40px 0;
+}
+
+/* ==========================================================================
+   4. GRID DE PROGRAMAS (CARDS-SOBRE)
+   ========================================================================== */
+.cards-sobre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.cards-title {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #0c2a66;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards-title:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(12, 42, 102, 0.06);
+}
+
+.cards-title h2 {
+    font-size: 20px;
+    color: #0c2a66;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cards-title p {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.cards-sobre > hr {
+    display: none;
+}
+
+.cards-sobre > p {
+    grid-column: 1 / -1; 
+    background-color: #0c2a66;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(12, 42, 102, 0.1);
+}
+
+/* ==========================================================================
+   5. BLOCOS INSTITUCIONAIS (TERMOS E PRIVACIDADE)
+   ========================================================================== */
+.termos-uso, .privacidade {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 40px;
+}
+
+.termos-uso h1, .privacidade h1 {
+    font-size: 28px;
+    color: #0c2a66;
+    font-weight: 800;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f4f6f8;
+    padding-bottom: 15px;
+}
+
+.termos-uso ol, .privacidade ol {
+    list-style-position: inside;
+}
+
+.termos-uso ol > li, .privacidade ol > li {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #0c2a66;
+    font-weight: 700;
+}
+
+.termos-uso ol > li:last-child, .privacidade ol > li:last-child {
+    margin-bottom: 0;
+}
+
+.termos-uso h2, .privacidade h2 {
+    font-size: 18px;
+    color: #0c2a66;
+    display: inline;
+    font-weight: 700;
+}
+
+.termos-uso p, .privacidade p {
+    font-size: 15px;
+    color: #555555;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 10px; /* Aumentado para dar o espaçamento correto sem precisar usar <br> */
+    text-align: justify;
+}
+
+/* ==========================================================================
+   6. LISTAS INTERNAS E ALERTAS
+   ========================================================================== */
+.privacidade ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.privacidade ul li {
+    font-size: 15px;
+    color: #555555;
+    font-weight: 400;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    padding-left: 5px;
+}
+
+.privacidade ul li:last-child {
+    margin-bottom: 0;
+}
+
+.privacidade ol > li:nth-child(4) {
+    background-color: #fff5f5;
+    border-left: 4px solid #e53e3e;
+    padding: 20px;
+    border-radius: 0 4px 4px 0;
+}
+
+.privacidade ol > li:nth-child(4) h2 {
+    color: #c53030;
+}
+
+.privacidade ol > li:nth-child(4) p {
+    color: #9b2c2c;
+}
+
+/* ==========================================================================
+   7. CSS DE LOGIN COMPLEMENTAR
+   ========================================================================== */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 290px);
+    padding: 40px 20px;
+}
+
+.login-principal {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.funcionamento {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    flex-wrap: wrap; 
+}
+.secao-funcionamento,
+.secao-cadastro {
+    display: block !important;
+    width: 100% !important;
+}
+
+.secao-cadastro {
+    margin-top: 40px !important;
+    clear: both !important;
+}
+
+main {
+    display: block !important;
+}
+/* ==========================================================================
+   8. MEDIA QUERIES (OTIMIZADAS E UNIFICADAS)
+   ========================================================================== */
+
+/* DISPOSITIVOS MÉDIOS (TABLETS - max-width: 992px) */
+/* DISPOSITIVOS MÓVEIS */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-itens {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-banner h1,
+    .banner h1,
+    .banner-politica h1 {
+        font-size: 28px;
+    }
+
+    .funcionamento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .funcionamento .busque,
+    .funcionamento .explore,
+    .funcionamento .participe {
+        max-width: 300px;
+    }
+
+    .roodape-geral {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .logo-rodape,
+    .navegacao,
+    .categoria-rodape,
+    .institucional-rodape {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .login {
+        padding: 20px 15px;
+    }
+
+    .login-principal {
+        padding: 30px 20px;
+    }
+
+    .lembrar-senha {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .pesquisar-politicas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pesquisar-politicas label {
+        margin-left: 0;
+    }
+
+    body > section:not(.roodape-geral) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .title-sobre {
+        padding: 25px 20px;
+    }
+
+    .title-sobre h1 {
+        font-size: 26px;
+    }
+
+    .cards-sobre {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cards-title {
+        padding: 20px;
+    }
+
+    .termos-uso,
+    .privacidade {
+        padding: 25px 20px;
+    }
+
+    .termos-uso h1,
+    .privacidade h1 {
+        font-size: 24px;
+    }
+
+    .termos-uso h2,
+    .privacidade h2 {
+        font-size: 16px;
+    }
+
+    .termos-uso p,
+    .privacidade p,
+    .privacidade ul li {
+        font-size: 14px;
+        text-align: left;
+    }
+}

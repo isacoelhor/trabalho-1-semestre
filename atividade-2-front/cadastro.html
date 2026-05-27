@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Cidadão</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <div class="logo-topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="m8 0 .412.01A7.97 7.97 0 0 1 13.29 2a8.04 8.04 0 0 1 2.548 4.382 8 8 0 1 1-15.674 0 8 8 0 0 1 1.361-3.078A8 8 0 0 1 2.711 2 7.96 7.96 0 0 1 8 0m0 1a7 7 0 0 0-5.958 3.324C2.497 6.192 6.669 7.827 6.5 8c-.5.5-1.034.884-1 1.5.07 1.248 2.259.774 2.5 2 .202 1.032-1.051 3 0 3 1.5-.5 3.798-3.186 4-5 .138-1.242-2-2-3.5-2.5-.828-.276-1.055.648-1.5.5S4.5 5.5 5.5 5s1 0 1.5.5c1 .5.5-1 1-1.5.838-.838 3.16-1.394 3.605-2.001A6.97 6.97 0 0 0 8 1"/>
+</svg>
+            </div>
+            <div class="title">
+            <h1>Conecta Cidadão</h1>
+            </div>
+        </div>
+        <nav class="menu-principal"></nav>
+        <ul class="menu-itens">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="politicas.html">Políticas</a></li>
+            <li class="submenu">
+                 <a href="categorias.html">Categorias</a>
+                 <div class="submenu-conteudo">
+                    <a href="categorias.html">Assistência Social</a>
+                    <a href="categorias.html">Saúde</a>
+                    <a href="categorias.html">Educação</a>
+                    <a href="categorias.html">Segurança e cidadania</a>
+                    <a href="categorias.html">Cultura</a>
+                 </div>
+            </li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+       <div class="botao-login">
+            <button> <a href="login.html">Entrar</a></button>
+       </div>
+    </header>
+    <div >
+        <div class="imagem-cadastro">
+            <img src="../imagens/undraw_file-searching_yska.svg" alt="pessoa conferindo dados">
+
+        </div>
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="fisrtname">Primeiro nome</label>
+                        <input type="text" name="fisrtname" id="fisrtname"
+                        placeholder="Digite seu primeiro nome" required>
+                    </div>
+
+                     <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input type="text" name="lastname" id="lastname"
+                        placeholder="Digite seu sobrenome" required>
+                    </div>
+
+                     <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"
+                        placeholder="Digite seu email" required>
+                    </div>
+
+                     <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input type="tel" name="number" id="number"
+                        placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                     <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password"
+                        placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="confirmpassword">Confirme sua senha</label>
+                        <input type="confirmpassword" name="confirmpassword" id="confirmpassword"
+                        placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-tittle">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" name="gender" id="others">
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" name="gender" id="none">
+                            <label for="none">Prefiro não identificar</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button><a href="#">Continuar</a></button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+   <div class="roodape-geral">
+        <div class="logo-rodape">
+            <img src="#" alt="">
+            <h2>Conecta Cidadão</h2>
+            <p>Informação que conecta. <br> Direitos que transformam.</p>
+        </div>
+        <nav class="navegacao">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="politicas.html">Políticas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <nav class="categoria-rodape">
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="categorias.html">Saúde</a></li>
+                <li><a href="categorias.html">Educação</a></li>
+                <li><a href="categorias.html">Emprego</a></li>
+                <li><a href="categorias.html">Assistência social</a></li>
+                <li><a href="categorias.html">Habitação</a></li>
+                <li><a href="categorias.html">Meio Ambiente</a></li>
+            </ul>
+        </nav>
+         <nav class="institucional-rodape">
+            <h3>Institucional</h3>
+            <ul>
+                <li><a href="sobre.html">Sobre o projeto</a></li>
+                <li><a href="termos.html">Termos de uso e Política de privacidade</a></li>
+            </ul>
+        </nav>
+        <footer>
+             <p class="copyright">&copy; 2026 Site Conecta Cidadão. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
