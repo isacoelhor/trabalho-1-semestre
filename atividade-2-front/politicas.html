@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Cidadão</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <!--menu-->
+    <header>
+        <div class="topo">
+            <div class="logo-topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe-americas-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="m8 0 .412.01A7.97 7.97 0 0 1 13.29 2a8.04 8.04 0 0 1 2.548 4.382 8 8 0 1 1-15.674 0 8 8 0 0 1 1.361-3.078A8 8 0 0 1 2.711 2 7.96 7.96 0 0 1 8 0m0 1a7 7 0 0 0-5.958 3.324C2.497 6.192 6.669 7.827 6.5 8c-.5.5-1.034.884-1 1.5.07 1.248 2.259.774 2.5 2 .202 1.032-1.051 3 0 3 1.5-.5 3.798-3.186 4-5 .138-1.242-2-2-3.5-2.5-.828-.276-1.055.648-1.5.5S4.5 5.5 5.5 5s1 0 1.5.5c1 .5.5-1 1-1.5.838-.838 3.16-1.394 3.605-2.001A6.97 6.97 0 0 0 8 1"/>
+</svg>
+            </div>
+            <div class="title">
+            <h1>Conecta Cidadão</h1>
+            </div>
+        </div>
+        <nav class="menu-principal"></nav>
+        <ul class="menu-itens">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="politicas.html">Políticas</a></li>
+            <li class="submenu">
+                 <a href="categorias.html">Categorias</a>
+                 <div class="submenu-conteudo">
+                    <a href="categorias.html">Assistência Social</a>
+                    <a href="categorias.html">Saúde</a>
+                    <a href="categorias.html">Educação</a>
+                    <a href="categorias.html">Segurança e cidadania</a>
+                    <a href="categorias.html">Cultura</a>
+                 </div>
+            </li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+       <div class="botao-login">
+            <button> <a href="login.html">Entrar</a></button>
+       </div>
+    </header>
+
+    <!--banner-->
+    <div class="banner-politica">
+        <h1>Encontre a política <br> que você precisa</h1>
+        <p>Use a busca ou filtre por categoria para encontrar programas e iniciativas.</p>
+    </div >
+
+    <!-- encontrar as politicas-->
+     <div class="pesquisar-politicas">
+        <form action="/buscar">
+        <label for="campo-buscar" id="campo-busca"></label>
+        <input type="search" name="buscar" id="campo-busca" placeholder="Buscar por nome da Política">
+        <button type="submit">Pesquisar</button>
+       </form>
+
+       <label for="categoria">Escolha uma categoria:</label>
+       <select name="categoria" id="categoria">
+          <option value="" disabled selected>Selecione...</option>
+          <option value="assistencia-social">Assistência Social</option>
+          <option value="saude">Saúde</option>
+          <option value="educacao">Educação</option>
+          <option value="seguranca">Segurança e cidadania</option>
+          <option value="cultura">Cultura</option>
+        </select>
+    </div>
+
+     <!--caixas das categorias-->
+     <section>
+        <div class="card-categoria">
+            <img src="../imagens/cuidados-de-saude.png" alt="">
+            <h3>Categoria <br> Saúde</h3>
+            <h2>SUS (Sistema Único de Saúde)</h2>
+            <p>A defesa do acesso universal, integral e gratuito à saúde como um direito de todos.</p>
+            <button><a href="categorias.html">Ver detalhes</a></button>
+        </div>
+
+         <div class="card-categoria">
+            <img src="../imagens/educacao.png" alt="capelo representando a educação">
+            <h3>Categoria <br> Educação</h3>
+            <h2>ProUni</h2>
+            <p>A democratização do acesso ao ensino superior, abrindo portas para o futuro de jovens de baixa renda.</p>
+            <button><a href="categorias.html">Ver detalhes</a></button>
+        </div>
+
+         <div class="card-categoria">
+            <img src="../imagens/policia.png" alt="Policial representando a Segurança e cidadania">
+            <h3>Categoria <br> Segurança e cidadania</h3>
+            <h2>Lei Maria da penha</h2>
+            <p>O mecanismo legal crucial para a prevenção, enfrentamento e erradicação da violência doméstica e familiar contra a mulher.</p>
+            <button><a href="categorias.html">Ver detalhes</a></button>
+        </div>
+
+         <div class="card-categoria">
+            <img src="../imagens/teatro.png" alt="As máscaras da comédia e da tragédia representando a cultura">
+            <h3>Categoria <br> Cultura</h3>
+            <h2>ID Jovem (Identidade Jovem 2.0)</h2>
+            <p>A garantia de benefícios de meia-entrada e transporte para a juventude, promovendo cultura, lazer e mobilidade.</p>
+            <button><a href="categorias.html">Ver detalhes</a></button>
+        </div>
+
+         <div class="card-categoria">
+            <img src="../imagens/assistencia-social.png" alt="Mãos segurando um grupo de pessoas representando a Assistência social">
+            <h3>Categoria <br> Assistência Social</h3>
+            <h2>Bolsa Família</h2>
+            <p>O combate à fome e à pobreza por meio da transferência de renda e do acesso a direitos básicos de saúde e educação</p>
+            <button><a href="categorias.html">Ver detalhes</a></button>
+        </div>
+     </section>
+
+
+      <!--rodape-->
+    <div class="roodape-geral">
+        <div class="logo-rodape">
+            <img src="#" alt="">
+            <h2>Conecta Cidadão</h2>
+            <p>Informação que conecta. <br> Direitos que transformam.</p>
+        </div>
+        <nav class="navegacao">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="politicas.html">Políticas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+        <nav class="categoria-rodape">
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="categorias.html">Saúde</a></li>
+                <li><a href="categorias.html">Educação</a></li>
+                <li><a href="categorias.html">Emprego</a></li>
+                <li><a href="categorias.html">Assistência social</a></li>
+                <li><a href="categorias.html">Habitação</a></li>
+                <li><a href="categorias.html">Meio Ambiente</a></li>
+            </ul>
+        </nav>
+         <nav class="institucional-rodape">
+            <h3>Institucional</h3>
+            <ul>
+                <li><a href="sobre.html">Sobre o projeto</a></li>
+                <li><a href="termos.html">Termos de uso e Política de privacidade</a></li>
+            </ul>
+        </nav>
+        <footer>
+             <p class="copyright">&copy; 2026 Seu Site. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
